@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+"http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl">
+	
+<head>
+	<title>Zadanie z XHTML</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="lab5.css" />
+</head>
+
+<body>
+	<h1>Zadanie z geometrii</h1>
+	<div class="tresczadania">Korzystając z podanych niżej wzorów, oblicz pole koła znajdującego się na rysunku.</div>
+	<div class="obrazek">
+		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<rect width="260" height="260" x="130" style="fill:yellow;stroke-width:1; stroke:red; stroke-width:2"/>
+			<ellipse cx="130" cy="130" rx="130" ry="130" style="fill:yellow; stroke:red ;stroke-width:1"/>
+			<text x="90" y="122">d = 10cm</text>
+			<line x1="260" y1="130" x2="0" y2="130" style="stroke:blue; stroke-width:2" />
+			<line x1="400" y1="260" x2="400" y2="0" style="stroke:blue; stroke-width:2" />
+			<text x="402" y="130">a = 10</text>
+		</svg>
+	</div>
+	<div class="rozwiazanie">
+		Wzór na pole koła:
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>P</mi>
+				<mo>=</mo>
+				<mi>&pi;</mi>
+				<mo>&InvisibleTimes;</mo>
+				<msup>
+					<mi>r</mi>
+					<mn>2</mn>
+				</msup>
+			</mrow>
+		</math>
+		<br/>
+		Wzór na promień koła:
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>r</mi>
+				<mo>=</mo>
+				<mfrac>
+					<mi>d</mi>
+					<mi>2</mi>
+				</mfrac>
+			</mrow>
+		</math>
+		<br />
+		Wzór na obwód koła:
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>r</mi>
+				<mo>=</mo>
+				<mi>&pi;</mi>
+				<mo>&InvisibleTimes;</mo>
+				<mi>l</mi>
+				<mo>&InvisibleTimes;</mo>
+				<mi>r</mi>
+			</mrow>
+		</math>
+		<br/>
+		Wzór na pole kwadratu:
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>P</mi>
+				<mo>=</mo>
+				<msup>
+					<mi>r</mi>
+					<mn>2</mn>
+				</msup>
+			</mrow>
+		</math>
+		<br/>
+		<br/>
+		<h2>Rozwiązanie zadania:</h2><br/>
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>Pkoła</mi>
+				<mo>=</mo>
+				<mi>&pi;</mi>
+				<msup>
+					<mi>10</mi>
+					<mn>2</mn>
+				</msup>
+				<mo>=</mo>
+				<mi>100</mi>
+				<mi>&pi;</mi>
+			</mrow>
+		</math>
+		<br/>
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>Pkwadratu</mi>
+				<mo>=</mo>
+				<msup>
+					<mi>10</mi>
+					<mn>2</mn>
+				</msup>
+				<mo>=</mo>
+				<mi>100</mi>
+			</mrow>
+		</math>
+		<h2>Odpowiedź:</h2><br/>
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mi>P</mi>
+				<mo>=</mo>
+				<mfrac>
+					<mi>100 &pi;</mi>
+					<mi>2</mi>
+				</mfrac>
+				<mo>+</mo>
+				<mi>100</mi>
+				<mo>=</mo>
+				<mi>150</mi>
+				<mi>&pi;</mi>
+			</mrow>
+		</math>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sprzet>
+	<karta-graficzna>
+		<karta nazwa = "GeForce 970">
+			<parametry-techniczne>
+				<pamiec>4 GB</pamiec>
+				<rodzaj-pamieci>GDDR5</rodzaj-pamieci>
+				<szyna-danych>256bit</szyna-danych>
+				<typ-zlacza>PCI-Express 3.0 x16</typ-zlacza>
+				<rozdzielczosc>4096x2160</rozdzielczosc>
+				<taktowanie-rdzenia>1111</taktowanie-rdzenia>
+			</parametry-techniczne>
+			<zlacza>
+				<d-sub>Przez adapter</d-sub>
+				<dvi>1xDVI-D Dual Link</dvi>
+				<hdmi>Tak</hdmi>
+			</zlacza>
+		</karta>
+		
+		<karta nazwa = "GeForce 980">
+			<parametry-techniczne>
+				<pamiec>4 GB</pamiec>
+				<rodzaj-pamieci>GDDR5</rodzaj-pamieci>
+				<szyna-danych>256bit</szyna-danych>
+				<typ-zlacza>PCI-Express 3.0 x16</typ-zlacza>
+				<rozdzielczosc>4096x2160</rozdzielczosc>
+				<taktowanie-rdzenia>1152</taktowanie-rdzenia>
+			</parametry-techniczne>
+			<zlacza>
+				<d-sub>Nie</d-sub>
+				<dvi>1xDVI-D Dual Link</dvi>
+				<hdmi>Tak</hdmi>
+			</zlacza>
+		</karta>
+	</karta-graficzna>
+	
+	<plyta-glowna>
+		<plyta nazwa = "Asus  M5A99FX">
+			<parametry-fizyczne>
+				<szerokosc>305mm</szerokosc>
+				<glebokosc>244mm</glebokosc>
+				<standard>ATX</standard>
+			</parametry-fizyczne>
+			
+			<parametry-techniczne>
+				<chipset>AMD 990FX</chipset>
+				<gniazdo-procesora>Socket AM3+</gniazdo-procesora>
+				<kontroler-raid>Nie</kontroler-raid>
+			</parametry-techniczne>
+		</plyta>
+	</plyta-glowna>
+</sprzet>

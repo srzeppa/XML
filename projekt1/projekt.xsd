@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="ksiazka">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="osoba" minOccurs="1" maxOccurs="100"/>
+				<xsd:element ref="rodzaj" minOccurs="1" maxOccurs="100"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:key name="kluczRodzaj">
+			<xsd:selector xpath="rodzaj"/>
+			<xsd:field xpath="@kod"/>
+		</xsd:key>
+		
+		<xsd:keyref name="idOsoba" refer="kluczRodzaj">
+			<xsd:selector xpath="osoba"/>
+			<xsd:field xpath="@kod"/>
+		</xsd:keyref>
+		
+	</xsd:element>
+
+	<xsd:element name="osoba">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="dane"/>
+				<xsd:element ref="adres"/>
+				<xsd:element ref="kontakt"/>
+			</xsd:sequence>
+			<xsd:attribute name="plec" use="required" type="plecT"/>
+			<xsd:attribute name="kod" use="required" type="rodzajT"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="dane">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="imie" type="imieT"/>
+				<xsd:element name="nazwisko" type="nazwiskoT"/>
+				<xsd:element name="wiek" type="xsd:integer"/>
+				<xsd:element name="data_urodzenia" type="xsd:string"/>
+				<xsd:element name="zawod" type="xsd:string"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="adres">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="miejscowosc" type="xsd:string"/>
+				<xsd:element name="kod_pocztowy" type="kodpocztowyT"/>
+				<xsd:element name="ulica" type="xsd:string"/>
+				<xsd:element name="nr_domu" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="kontakt">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="telefon"/>
+				<xsd:element name="e-mail" type="emailT" minOccurs="0" maxOccurs="5"/>
+				<xsd:choice>
+					<xsd:element name="www" type="wwwT"/>
+					<xsd:element name="gg" type="ggT"/>
+				</xsd:choice>
+				<xsd:element ref="status"/>
+				<xsd:element name="daty" type="unia"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="telefon" >
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="tel_dom" type="telefonT" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="tel_kom" type="telefonT" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="tel_prac" type="telefonT" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="status">
+		<xsd:complexType>
+			<xsd:attribute name="tekst" use="required" type="statusT"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name="imieT">
+	    <xsd:restriction base="xsd:Name">
+		    <xsd:pattern value="\p{Lu}\p{Ll}+"/>
+			<xsd:maxLength value="30"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="nazwiskoT">
+	    <xsd:restriction base="xsd:Name">
+		    <xsd:pattern value="\p{Lu}\p{Ll}+"/>
+			<xsd:maxLength value="30"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="plecT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="m"/>
+			<xsd:enumeration value="k"/>
+			<xsd:enumeration value="brak"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="telefonT">
+	    <xsd:restriction base="xsd:string">
+			<xsd:pattern value="((\+[0-9][0-9]){0,1})([0-9]){9}"/>
+		    <xsd:minLength value="9"/>
+		    <xsd:maxLength value="12"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="kodpocztowyT">
+	    <xsd:restriction base="xsd:string">
+	    	<xsd:pattern value="[0-9][0-9]\-[0-9][0-9][0-9]"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="wwwT">
+	    <xsd:restriction base="xsd:string">
+	    	<xsd:pattern value="(http://){1}([A-Za-z0-9]\.*)*"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="emailT">
+	    <xsd:restriction base="xsd:string">
+	    	<xsd:pattern value="[0-9a-zA-Z]*@[0-9a-zA-Z]*(\.)[\.0-9a-zA-Z]*"/>
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="ggT">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="statusT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="jestem online"/>
+			<xsd:enumeration value="jestem offline"/>
+			<xsd:enumeration value="brak"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="brakT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="brak"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="dataLista">
+		<xsd:list itemType="xsd:date"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="unia">
+		<xsd:union memberTypes="dataLista brakT"/>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="rodzajMoj">
+		<xsd:simpleContent>
+			<xsd:extension base="rodzajT">
+				<xsd:attribute name="kod" type="xsd:token" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:element name="rodzaj" type="rodzajMoj"/>
+
+	<xsd:simpleType name="rodzajT">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(([a-zA-Z]){1})([0-9a-zA-Z]*)"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

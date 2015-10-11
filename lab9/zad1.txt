@@ -1,0 +1,29 @@
+1. Wszystkich mężczyzn.
+studenci/student[@plec="m"]   - 2 mężczyzn
+
+2. Wszystkie numery indeksów mniejsze od 130 lub większe od 190.
+studenci/student[@indeks<130 or @indeks>190]   - 2 studentow
+
+3. Indeks studenta, który w pliku XML jest po studencie o imieniu Marcin.
+studenci/student[imie='Marcin']/following::*[1]/@indeks
+
+4. Kierunek studenta, który ma na nazwisko Nowak.
+studenci/student[nazwisko='Nowak'] /studia/kierunek
+
+5.Wszystkie węzły-dzieci studenta o imieniu Jan.
+studenci/student[imie='Jan'] /child::*
+
+8.Wszystkie kobiety studiujące matematykę.
+studenci/student/studia[kierunek='Matematyka']/..[@plec='k']
+
+10. Wszystkich studentów studiujących informatykę.
+studenci/student/studia[kierunek='Informatyka']/..
+
+15. Wszystkich studentów, których indeks jest różny od 122.
+studenci/student[@indeks != 122]
+
+16. Wszystkie numery indeksów mniejsze od 135, ale większe od 130.
+studenci/student[@indeks<135 and @indeks>130]
+
+17.Sumę indeksów wszystkich studentów.
+sum(studenci/student/@indeks)

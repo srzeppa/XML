@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<faktura>
+	<listaProduktow>
+		<produkt>
+			<nazwa>Laptop</nazwa>
+			<kod>CSADAC</kod>
+			<cena waluta="PLN">3049.99</cena>
+			<ilosc>1</ilosc>	
+		</produkt>
+		<produkt>
+			<nazwa>Myszka</nazwa>
+			<kod>CDSAA</kod>
+			<cena waluta="PLN">49.00</cena>
+			<ilosc>1</ilosc>
+		</produkt>
+	</listaProduktow>
+	
+	<sklep>
+		<nazwa>PCMAX</nazwa>
+		<adres>Gdańsk</adres>
+		<kodPocztowy>83-200</kodPocztowy>
+		<telefon>508555444</telefon>
+		<nip>1023456-91</nip>
+	</sklep>
+</faktura>

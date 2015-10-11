@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<faktura>
+	<produkty>
+		<produkt>
+			<nazwa>Laptop</nazwa>
+			<kod>CDSA</kod>
+			<cena waluta="PLN">3049</cena>
+			<ilosc>1</ilosc>
+		</produkt>
+		<produkt>
+			<nazwa>Myszka</nazwa>
+			<kod>CDSA</kod>
+			<cena waluta="PLN">49</cena>
+			<ilosc>1</ilosc>
+		</produkt>
+	</produkty>
+
+	<sklep>
+		<nazwa>PCMAX</nazwa>
+		<adres>Gdańsk</adres>
+		<telefon>123456478</telefon>
+		<nip>12345678912</nip>
+		<kodPocztowy>12-134</kodPocztowy>
+	</sklep>
+</faktura>

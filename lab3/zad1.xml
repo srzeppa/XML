@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE uczelnia SYSTEM "lab3dtd2.dtd">
+
+<uczelnia>
+	<nazwa>Uniwersytet Gdański</nazwa>
+	
+		<rektor>
+			<tytul>profesor</tytul>
+			<imie>Avxzfsfs</imie>
+			<nazwisko>Casdadas</nazwisko>
+		</rektor>
+		
+		<prorektor>
+			<tytul>profesor</tytul>
+			<imie>Acascsds</imie>
+			<nazwisko>Józek</nazwisko>
+		</prorektor>
+		
+		<prorektor>
+			<tytul>profesor</tytul>
+			<imie>ziomek</imie>
+			<nazwisko>ziomeczek</nazwisko>
+		</prorektor>
+		
+		<wydzial>
+			<nazwa>Matematyki</nazwa>
+			
+			<dziekan>
+				<imie>Acfasdas</imie>
+				<nazwisko>Adsadas</nazwisko>
+				<tytul>profesor</tytul>
+			</dziekan>
+			
+			<prodziekan>
+				<imie>Adsavdasv</imie>
+				<nazwisko>Afasvcvcxds</nazwisko>
+				<tytul>Dsadsa</tytul>
+			</prodziekan>
+			
+		<instytut>
+			<nazwa>Geometrii</nazwa>
+			
+			<dyrektor>
+				<tytul>profesor</tytul>
+				<imie>Marceli</imie>
+				<nazwisko>Kowalczyk</nazwisko>
+			</dyrektor>
+		</instytut>
+		
+		<kierunek>
+			<nazwa>Matematyka</nazwa>
+			<kurs>
+				<nazwa>Dodawanie</nazwa>
+				<opis>Dodajemy</opis>
+				<forma>Ćwiczenia</forma>
+				<limit>10</limit>
+			</kurs>
+		</kierunek>
+		</wydzial>
+		
+		<wydzial>
+			<nazwa>Chemiczny</nazwa>
+			
+			<dziekan>
+				<imie>Avcxzcxz</imie>
+				<nazwisko>Afsdfsfsd</nazwisko>
+				<tytul>profesor</tytul>
+			</dziekan>
+			
+			<instytut>
+				<nazwa>Kwasów</nazwa>
+				<dyrektor>
+					<tytul>profesor</tytul>
+					<imie>Sylwia</imie>
+					<nazwisko>Nowak</nazwisko>
+				</dyrektor>
+			</instytut>
+			
+			<kierunek>
+				<nazwa>Fizyka</nazwa>
+				<kurs>
+					<nazwa>Wzory</nazwa>
+					<opis>wzory fizyczne</opis>
+					<forma>Wykłady</forma>
+					<limit>10</limit>
+				</kurs>
+			</kierunek>
+		</wydzial>
+		
+		<katedra>
+			<nazwa>Gemometri</nazwa>
+			<dyrektor>
+				<tytul>profesor</tytul>
+				<imie>dsadsadsadsa</imie>
+				<nazwisko>vfvfdgfdgfdgfd</nazwisko>
+			</dyrektor>
+		</katedra>
+</uczelnia>

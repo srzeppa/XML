@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!ENTITY dr "doktor">
+
+<!ELEMENT ksiazka (osoba+, rodzaj*) >
+<!ELEMENT osoba (dane, adres, kontakt) >
+	<!ATTLIST osoba plec (m|k) #REQUIRED
+				  kod IDREF #REQUIRED>
+
+<!ELEMENT dane (imie, nazwisko, wiek, data_urodzenia, zawod) >
+	<!ELEMENT tytul (#PCDATA) >
+	<!ELEMENT imie (#PCDATA) >
+	<!ELEMENT nazwisko (#PCDATA) >
+	<!ELEMENT wiek (#PCDATA) >
+	<!ELEMENT data_urodzenia (#PCDATA) >
+	<!ELEMENT zawod (#PCDATA) >
+
+<!ELEMENT adres (miejscowosc, kod_pocztowy, ulica, nr_domu) >
+	<!ATTLIST adres xmlns CDATA #IMPLIED>
+	<!ELEMENT miejscowosc (#PCDATA) >
+	<!ELEMENT kod_pocztowy (#PCDATA) >
+	<!ELEMENT ulica (#PCDATA) >
+	<!ELEMENT nr_domu (#PCDATA) >
+
+<!ELEMENT kontakt (telefon, e-mail?, gg?, www?) >
+	<!ELEMENT telefon (#PCDATA) >
+	<!ELEMENT e-mail (#PCDATA) >
+	<!ELEMENT www (#PCDATA) >
+	<!ELEMENT gg (#PCDATA) >
+
+<!ELEMENT rodzaj (#PCDATA) >
+	<!ATTLIST rodzaj kod ID #REQUIRED >

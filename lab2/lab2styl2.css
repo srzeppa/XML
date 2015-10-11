@@ -1,0 +1,71 @@
+listaStudentow {
+	border: 3px dotted blue;
+	margin: auto auto auto auto;
+	width: 470px;
+	height: 360px;
+	background: #87fff7;
+}
+grupa{
+	margin: auto;
+}
+
+grupa[nr="1"]{
+	border: 1px solid black;
+	display: table;
+	background: #c1f7dc;
+	float:left;
+	margin: 5px 5px 12px 15px;
+}
+grupa[nr="2"]{
+	border: 1px solid black;
+	display: table;
+	background: #c1f7dc;
+	margin: 5px 5px 5px 0px;
+	float: left;
+}
+grupa[nr="3"]{
+	border: 1px solid black;
+	display: table;
+	background: #c1f7dc;
+	margin: 5px 5px 5px 0px;
+	float: left ;
+}
+student {
+	border: 2px solid black;
+	display: block;
+	margin: 5px 5px 5px 5px;
+	background: #56bf8b;
+}
+
+grupa[nr="1"] student:hover{
+	background: gold;
+	}
+
+grupa[nr="2"] student:hover{
+	background: pink;
+	}
+	
+grupa[nr="3"] student:hover{
+	background: #ff5e5e;
+	}
+
+nazwisko, imie{
+	font-family: Times new roman;
+	font-size:14px;
+	padding:1px;
+	margin: 3px, 3px 3px, 3px ;
+}
+nazwisko{
+	color:blue;
+}
+nrIndeksu:before {
+	content: "indeks: ";
+	font-family: courier;
+	}
+	
+nrIndeksu {
+	font-size:10px;
+	display:block;
+	padding:4px;
+	margin: 4px;
+}
